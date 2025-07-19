@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Commande;
 use App\Models\Commentaire;
 use App\Models\PointDeVente;
 use App\Models\Produit;
@@ -35,6 +36,14 @@ class TisaneController extends Controller
     public function delete_coms(Commentaire $id)
     {
         $id->delete();
+        return back();
+    }
+
+    public function confirm_commande(Commande $id)
+    {
+        $id->update([
+            'type'=>'valid'
+        ]);
         return back();
     }
 }

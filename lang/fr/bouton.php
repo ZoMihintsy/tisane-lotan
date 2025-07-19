@@ -31,7 +31,7 @@ return [
      "bouton_back"=> "Retour",
      "bouton_view"=> "Voir",
      "bouton_contact"=> "Contactez-nous",
-     "bouton_confirm"=> "Confirmer",
+     "bouton-confirm"=> "Confirmer",
      "bouton_verify"=> "Verifier",
      "bouton_command"=>"'Commander",
      

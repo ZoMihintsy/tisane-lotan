@@ -92,7 +92,9 @@ Route::view('profile', 'profile')
     Route::view('t-admin/les+commandes','admin.commande')
     ->middleware(['auth','verified'])
     ->name('commande');
-
+    Route::get('t-admin/Commande+confirmer/commande={id}',[TisaneController::class, 'confirm_commande'])
+    ->middleware(['auth','verified'])
+    ->name('confirm.commande');
     //commentaire 
     Route::view('t-admin/les+commentaires','admin.commentaire')
     ->middleware(['auth','verified'])
@@ -101,5 +103,7 @@ Route::view('profile', 'profile')
     Route::get('Suprimer+le+commentaire/q={id}',[TisaneController::class, 'delete_coms'])
     ->middleware(['auth','verified'])
     ->name('supprime.coms');
+
+
 
 require __DIR__.'/auth.php';

@@ -60,7 +60,7 @@ return [
 
 "bouton_contact"=>"Contact us",
 
-"bouton- confirm"=>"Confirm",
+"bouton-confirm"=>"Confirm",
 
 "bouton_verify"=>"Verify",
 
