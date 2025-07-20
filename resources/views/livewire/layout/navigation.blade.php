@@ -30,32 +30,32 @@ new class extends Component
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('t.category')" class="text-brown" :active="request()->routeIs('t.category')" wire:navigate>
-                        {{ __('Categorie') }}
+                    <x-nav-link :href="route('t.category')" class="text-blue-light" :active="request()->routeIs('t.category')" wire:navigate>
+                        {{ __('accueil.categorie') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('t.produit')" class="text-brown" :active="request()->routeIs('t.produit')" wire:navigate>
-                        {{ __('Ajoute de produit') }}
+                    <x-nav-link :href="route('t.produit')" class="text-blue-light" :active="request()->routeIs('t.produit')" wire:navigate>
+                        {{ __('accueil.produits') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('t.point')" class="text-brown" :active="request()->routeIs('t.point')" wire:navigate>
+                    <x-nav-link :href="route('t.point')" class="text-blue-light" :active="request()->routeIs('t.point')" wire:navigate>
                         {{ __('Point de vente') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('t.points')" class="text-brown" :active="request()->routeIs('t.points')" wire:navigate>
-                        {{ __('Les points de vente') }}
+                    <x-nav-link :href="route('t.points')" class="text-blue-light" :active="request()->routeIs('t.points')" wire:navigate>
+                        {{ __('footer.point') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('commande')" class="text-brown-dark" :active="request()->routeIs('commande')" wire:navigate>
-                        {{ __('Commandes') }}
+                    <x-nav-link :href="route('commande')" class="text-blue-light" :active="request()->routeIs('commande')" wire:navigate>
+                        {{ __('footer.command') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('commentaire')" class="text-brown-dark" :active="request()->routeIs('commentaire')" wire:navigate>
+                    <x-nav-link :href="route('commentaire')" class="text-blue-light" :active="request()->routeIs('commentaire')" wire:navigate>
                         {{ __('Commentaires') }}
                     </x-nav-link>
                 </div>

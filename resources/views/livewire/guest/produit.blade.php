@@ -5,6 +5,17 @@ use App\Livewire\Guest\Produit;
 new Produit;
 ?>
 <div>
+    <style>
+    img{
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+    </style>
 <form action="">
     <select name="" wire:input="trier" wire:model="trie" id="">
         <option value="">---Trier par category----</option>
@@ -26,7 +37,9 @@ new Produit;
             {{ $produits->nom }}
         </h1>
         <h2 class="text-2xl font-bold text-center text-green-800" style="text-transform: capitalize">
-            <img src="{{asset('storage/'.$produits->photo) }}" class="hover:scale-110 transition" alt="" style="width:500px;height:250px" srcset="">
+        <center>
+            <img src="{{asset('storage/'.$produits->photo) }}"  class="rounded hover:scale-110 transition" alt="" srcset="">
+        </center>
         </h2>
        <div class="p-4  font-medium">
                 <h5 class="text-1xl font-bold  text-green-800">
@@ -51,7 +64,7 @@ new Produit;
         </h1>
         <h2 class="text-2xl font-bold text-center text-green-800" style="text-transform: capitalize">
         <center>
-            <img src="{{asset('storage/'.$produits->photo) }}" class="hover:scale-110 transition" alt="" style="width:500px;height:250px" srcset="">
+            <img src="{{asset('storage/'.$produits->photo) }}" class="hover:scale-110 transition" alt=""  srcset="">
         </center>
         </h2>
        <div class="p-4  font-medium">

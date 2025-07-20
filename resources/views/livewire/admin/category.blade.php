@@ -5,12 +5,15 @@ use App\Livewire\Admin\Category;
 new Category;
 ?>
 <div class="font-bold">
+<x-auth-session-status class="mb-4" :status="session('status')" />
+
     <div class="text-center">
         <h2 class="text-3xl text-blue-light font-semibold mb-4">
         {{__('renseignement.categorie_title')}}
         </h2>
         <form wire:submit="saveCategory">
             <x-text-input class="w-full " wire:model="type" placeholder="{{__('renseignement.name_categorie')}}" />
+            <x-input-error :messages="$errors->get('type')" />
             <br>
             <br>
             <x-text-input class="w-full " wire:model="type_package" placeholder="{{__('renseignement.categorie_title')}}" />
@@ -43,7 +46,7 @@ new Category;
         @endphp
         
         <div class="category-card bg-3d-blue-linear  rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-        <a href="{{route('modification.point',['id'=>$categori->id])}}" wire:navigate class="bi bi-pen rounded-md text-right hover:scale-110 transition text-black bg-white p-4" ></a>
+        <a href="{{route('modif.category',['id'=>$categori->id])}}" wire:navigate class="bi bi-pen rounded-md text-right hover:scale-110 transition text-black bg-white p-4" ></a>
         <a href="{{route('suppression.point',['id'=>$categori->id])}}" wire:navigate class="bi bi-trash rounded-md text-right hover:scale-110 text-white bg-red p-4" ></a>
             
         <h2 class="text-3xl font-bold text-center text-green-800 mb-8" style="text-transform: capitalize">

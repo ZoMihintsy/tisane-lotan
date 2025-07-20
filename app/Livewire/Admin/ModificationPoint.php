@@ -17,7 +17,7 @@ class ModificationPoint extends Component
     $point_vente = PointDeVente::where('id',$this->id)->first();
     if(empty($point_vente))
     {
-        $this->redirect("dashboard",navigate:true);
+        $this->redirect("t-admin/dashboard",navigate:true);
     }else{
     $this->nom = $point_vente->nom;
     $this->ville = $point_vente->ville;

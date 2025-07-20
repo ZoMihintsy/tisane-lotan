@@ -79,6 +79,10 @@ Route::view('profile', 'profile')
     ->middleware('guest')
     ->name('category');
 
+    Route::view('t-admin/Moification+du+catégorie/q={id}','admin.modificationcategory')
+    ->middleware(['auth','verified'])
+    ->name('modif.category');
+
     Route::view('Point+de+vente','guest.place')
     ->middleware('guest')
     ->name('place');

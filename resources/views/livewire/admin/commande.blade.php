@@ -19,7 +19,7 @@ new Commande;
             
                     <strong>Nom du personne : </strong>{{ $commandes->nom }} <br>
                         <strong>Email :</strong><a href="mailto:{{ $commandes->email }}">{{ $commandes->email }}</a><br>
-                        <strong>Date de la Commande</strong>{{ $commandes->created_at->format('d/m/Y H:i') }} <br>
+                        <strong>Date de la Commande :</strong>{{ date('d/m/Y H:i',strtotime($commandes->crenaux)) }} <br>
                         <strong>Produit(s)</strong>
                             @foreach($produit as $produits)
                                 @if($produits->id == $commandes->produit_id)
